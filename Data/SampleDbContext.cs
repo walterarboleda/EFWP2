@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using EFWP2.Models;
 
-
-
 namespace EFWP2.Data
 {
     public class SampleDbContext: DbContext
@@ -13,18 +11,16 @@ namespace EFWP2.Data
         : base(options)
         { }
 
-       public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         public virtual DbSet<Order> Orders { get; set; }
 
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-                 modelBuilder.Entity<Order>()
-                .HasMany(ur => ur.Products)
-                .WithOne(ur => ur.Orders)
-                .HasForeignKey(ur => ur.OrderId)
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.Products)
+                .WithOne(p => p.Order)
+                .HasForeignKey(p => p.OrderId)
                 .IsRequired();
         }
     }
