@@ -13,13 +13,24 @@
  Install-Package Microsoft.EntityFrameworkCore.Tools
 
 
-## 2. Use the following commands on PM after creating the DBContext and Models>
+
+## 2. Use the following commands on PM after creating the DBContext and Models to make the database migration>
 
 dotnet build
 
 dotnet ef migrations add InitialCreate
 
 dotnet ef database update 
+
+
+
+## 3. Create the Controllers and Views of each models using Create Controllers and Views using Entity Framework and automatically generate Controllers and Views
+
+
+
+## 4. Compile and Execute the Web Application
+
+![Uploading image.png…]()
 
 <img width="1608" height="670" alt="image" src="https://github.com/user-attachments/assets/bfe0a9fb-ec74-440a-8ac5-68555604696a" />
 
