@@ -14,7 +14,7 @@
 
 
 
-## 2. Use the following commands on PM after creating the DBContext and Models to make the database migration>
+## 2. Use the following commands on PM after creating the DBContext and Models to make the database migration or database creation from code in MS SQL Server>
 
 dotnet build
 
