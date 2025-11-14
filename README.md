@@ -30,8 +30,6 @@ dotnet ef database update
 
 ## 4. Compile and Execute the Web Application
 
-![Uploading image.png…]()
-
 <img width="1608" height="670" alt="image" src="https://github.com/user-attachments/assets/bfe0a9fb-ec74-440a-8ac5-68555604696a" />
 
 
