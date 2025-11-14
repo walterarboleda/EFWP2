@@ -4,7 +4,9 @@
 ## By Walter Hugo Arboleda Mazo
 
 
-## 1. Install the following namespaces using PM or NuGet
+## 1. Create your ASP.NET Core project in Visual Studio 2022
+
+## 2. Install the following namespaces using PM or NuGet
  
  Install-Package Microsoft.EntityFrameworkCore.SqlServer
  
@@ -12,9 +14,24 @@
  
  Install-Package Microsoft.EntityFrameworkCore.Tools
 
+## 3. Configure the appsettings.json file using your Server and Database
 
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
 
-## 2. Use the following commands on PM after creating the DBContext and Models to make the database migration or database creation from code in MS SQL Server>
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB; ;Database=OrdersProductsDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+
+    "AllowedHosts": "*"
+}
+
+## 4. Use the following commands on PM after creating the DBContext and Models to make the database migration or database creation from code in MS SQL Server>
 
 dotnet build
 
@@ -24,11 +41,11 @@ dotnet ef database update
 
 
 
-## 3. Create the Controllers and Views of each models using Create Controllers and Views using Entity Framework and automatically generate Controllers and Views
+## 5. Create the Controllers and Views of each models using Create Controllers and Views using Entity Framework and automatically generate Controllers and Views
 
 
 
-## 4. Compile and Execute the Web Application
+## 6. Compile and Execute the Web Application
 
 <img width="1608" height="670" alt="image" src="https://github.com/user-attachments/assets/bfe0a9fb-ec74-440a-8ac5-68555604696a" />
 
